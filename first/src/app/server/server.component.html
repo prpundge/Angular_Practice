@@ -1,0 +1,15 @@
+<p>server works!</p>
+<div class="container">  
+    <div class="row">  
+   <div class="col-xs-12"> 
+<button class="btn btn-primary"  [disabled]="!allowNewServer" 
+(click)="onCreateServer()"> add </button>
+<p></p>
+<input type="text" class="form-control" 
+(input)="onUpdateServer($event)">
+
+<p>{{serverName}}</p>
+</div>
+</div>
+</div>
+

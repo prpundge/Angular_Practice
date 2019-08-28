@@ -1,0 +1,42 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="userLoginName">Login Name</label>
+          <input type="text" [(ngModel)]="user.userLoginName" 
+            class="form-control" id="userLoginName" name="userLoginName" placeholder="Enter your name"
+            required #name="ngModel">
+        </div>
+        <!-- <div [hidden]="!userLoginName.pristine" class="alert alert-danger">Name is required</div> -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" [(ngModel)]="user.title" 
+              class="form-control" id="title" name="title" placeholder="Enter your title"
+              required #name="ngModel">
+          </div>
+          <!-- <div [hidden]="!title.pristine" class="alert alert-danger">title is required</div> -->
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" [(ngModel)]="user.firstName" 
+              class="form-control" id="firstName" name="firstName" placeholder="Enter your firstName"
+              required #name="ngModel">
+          </div>
+          <!-- <div [hidden]="!firstName.pristine" class="alert alert-danger">firstName is required</div> -->
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" [(ngModel)]="user.lastName" 
+              class="form-control" id="lastName" name="lastName" placeholder="Enter your lastName"
+              required #name="ngModel">
+          </div>
+          <!-- <div [hidden]="!lastName.pristine" class="alert alert-danger">lastName is required</div> -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" [(ngModel)]="user.email" 
+            class="form-control" id="email" name="email" placeholder="Enter your email address"
+            required #email="ngModel">
+          <!-- <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div> -->
+        </div>
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../service/user-service.service';
 
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -16,6 +17,7 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
     this.userService.findAll().subscribe(data => {
       this.users = data;
+      console.log(this.users);
     });
   }
 }
